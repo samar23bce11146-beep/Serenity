@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Serenity — Stress & Anxiety Reduction</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── Navigation ───────────────────────────────── -->
+  <header class="nav" id="nav" role="banner">
+    <a class="nav__logo" href="#home" aria-label="Serenity home">
+      <div class="nav__logo-mark" aria-hidden="true">🌿</div>
+      <span class="nav__logo-name">Serenity</span>
+    </a>
+
+    <nav aria-label="Primary navigation">
+      <ul class="nav__tabs" role="list">
+        <!--
+          Each <li> carries data-nav="<section-id>" so script.js can match it
+          to the currently visible section without relying on href parsing.
+        -->
+        <li class="nav__tab" data-nav="home">
+          <a href="#home">Home</a>
+        </li>
+        <li class="nav__tab" data-nav="light-therapy">
+          <a href="#light-therapy">Light Therapy</a>
+        </li>
+        <li class="nav__tab" data-nav="sound-therapy">
+          <a href="#sound-therapy">Sound Therapy</a>
+        </li>
+        <!--
+          Breathing nav points to #breathing-section (not #breathing) to avoid
+          conflicting with the old pillar-card id="breathing" that was on-screen
+          at page load and caused the wrong tab to be highlighted by default.
+        -->
+        <li class="nav__tab" data-nav="breathing-section">
+          <a href="#breathing-section">Breathing</a>
+        </li>
+        <li class="nav__tab" data-nav="quick-calm">
+          <a href="#quick-calm">Quick Calm</a>
+        </li>
+        <li class="nav__tab" data-nav="about">
+          <a href="#about">About</a>
+        </li>
+        <li class="nav__tab" data-nav="begin">
+          <a class="nav__cta" href="#begin">Begin</a>
+        </li>
+      </ul>
+    </nav>
+
+    <button class="nav__menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+        <line x1="3" y1="7"  x2="19" y2="7" />
+        <line x1="3" y1="11" x2="19" y2="11" />
+        <line x1="3" y1="15" x2="19" y2="15" />
+      </svg>
+    </button>
+  </header>
+
+  <!-- ── Main Content ──────────────────────────────── -->
+  <main>
+
+    <!-- ① HOME ─────────────────────────────────────
+         id="home" is the scroll target for the Home tab.
+         The hero section IS the home section.
+    ─────────────────────────────────────────────── -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+
+      <!-- Decorative ambient orbs -->
+      <div class="hero__orb hero__orb--1" aria-hidden="true"></div>
+      <div class="hero__orb hero__orb--2" aria-hidden="true"></div>
+      <div class="hero__orb hero__orb--3" aria-hidden="true"></div>
+
+      <div class="hero__eyebrow" aria-hidden="true">
+        <span class="hero__eyebrow-dot"></span>
+        Light &amp; Sound Therapy System
+      </div>
+
+      <h1 class="hero__title" id="hero-title">
+        Find your<br><em>calm</em>, wherever<br>you are
+      </h1>
+
+      <p class="hero__subtitle">
+        A gentle, science-backed space that blends light therapy and soundscapes
+        to help you breathe, reset, and return to stillness — in minutes.
+      </p>
+
+      <!-- Mode selection buttons -->
+      <div class="hero__modes" role="group" aria-label="Select a mode to begin">
+        <a class="mode-btn mode-btn--exam" href="#begin" data-mode="exam">
+          <span class="mode-btn__icon" aria-hidden="true">📚</span>
+          <span class="mode-btn__text">
+            <span class="mode-btn__label">Exam Stress</span>
+            <span class="mode-btn__hint">Pre-test calm &amp; focus</span>
+          </span>
+        </a>
+
+        <a class="mode-btn mode-btn--sleep" href="#begin" data-mode="sleep">
+          <span class="mode-btn__icon" aria-hidden="true">🌙</span>
+          <span class="mode-btn__text">
+            <span class="mode-btn__label">Sleep Anxiety</span>
+            <span class="mode-btn__hint">Wind down gently</span>
+          </span>
+        </a>
+
+        <a class="mode-btn mode-btn--panic" href="#begin" data-mode="panic">
+          <span class="mode-btn__icon" aria-hidden="true">🌊</span>
+          <span class="mode-btn__text">
+            <span class="mode-btn__label">Panic Mode</span>
+            <span class="mode-btn__hint">Immediate grounding</span>
+          </span>
+        </a>
+
+        <a class="mode-btn mode-btn--focus" href="#begin" data-mode="focus">
+          <span class="mode-btn__icon" aria-hidden="true">🎯</span>
+          <span class="mode-btn__text">
+            <span class="mode-btn__label">Focus Mode</span>
+            <span class="mode-btn__hint">Deep work flow state</span>
+          </span>
+        </a>
+      </div>
+
+      <div class="scroll-hint" aria-hidden="true">
+        <div class="scroll-hint__arrow">↓</div>
+        <span>Explore</span>
+      </div>
+
+    </section>
+
+    <!-- ② LIGHT THERAPY ─────────────────────────── -->
+    <section class="placeholder-section" id="light-therapy" aria-labelledby="lt-heading">
+      <div class="placeholder-section__inner">
+        <span class="placeholder-section__icon" aria-hidden="true">💡</span>
+        <h2 class="placeholder-section__title" id="lt-heading">Light Therapy</h2>
+        <p class="placeholder-section__desc">
+          Targeted colour wavelengths shift your mood and circadian rhythm,
+          gently guiding you toward alertness or rest.
+        </p>
+        <span class="placeholder-section__badge">Coming soon</span>
+      </div>
+    </section>
+
+    <!-- ③ SOUND THERAPY ─────────────────────────── -->
+    <section class="placeholder-section" id="sound-therapy" aria-labelledby="st-heading">
+      <div class="placeholder-section__inner">
+        <span class="placeholder-section__icon" aria-hidden="true">🎵</span>
+        <h2 class="placeholder-section__title" id="st-heading">Sound Therapy</h2>
+        <p class="placeholder-section__desc">
+          Binaural beats and nature soundscapes synchronise your brainwaves,
+          reducing cortisol and inviting deep calm.
+        </p>
+        <span class="placeholder-section__badge">Coming soon</span>
+      </div>
+    </section>
+
+    <!-- ④ BREATHING ──────────────────────────────
+         id="breathing-section" (not "breathing") prevents a collision
+         with any other element that might use id="breathing", which was
+         causing the Breathing tab to incorrectly highlight on page load.
+    ─────────────────────────────────────────────── -->
+    <section class="placeholder-section" id="breathing-section" aria-labelledby="br-heading">
+      <div class="placeholder-section__inner">
+        <span class="placeholder-section__icon" aria-hidden="true">🫧</span>
+        <h2 class="placeholder-section__title" id="br-heading">Guided Breathing</h2>
+        <p class="placeholder-section__desc">
+          Visual breath guides and tactile rhythms activate your parasympathetic
+          nervous system within minutes.
+        </p>
+        <span class="placeholder-section__badge">Coming soon</span>
+      </div>
+    </section>
+
+    <!-- ⑤ QUICK CALM (new) ───────────────────────── -->
+    <section class="placeholder-section" id="quick-calm" aria-labelledby="qc-heading">
+      <div class="placeholder-section__inner">
+        <span class="placeholder-section__icon" aria-hidden="true">⚡</span>
+        <h2 class="placeholder-section__title" id="qc-heading">Quick Calm</h2>
+        <p class="placeholder-section__desc">
+          A 60-second reset combining breath, light, and sound — designed for
+          moments when you need relief right now.
+        </p>
+        <span class="placeholder-section__badge">Coming soon</span>
+      </div>
+    </section>
+
+    <!-- ⑥ ABOUT / HOW IT WORKS ───────────────────── -->
+    <section class="pillars" id="about" aria-labelledby="pillars-heading">
+      <p class="pillars__label" id="pillars-heading">How it works</p>
+
+      <div class="pillars__grid">
+        <!-- No id attributes on these cards — avoids observer conflicts -->
+        <article class="pillar-card">
+          <span class="pillar-card__icon" aria-hidden="true">💡</span>
+          <h2 class="pillar-card__title">Light Therapy</h2>
+          <p class="pillar-card__desc">
+            Targeted colour wavelengths shift your mood and circadian rhythm,
+            gently guiding you toward alertness or rest.
+          </p>
+        </article>
+
+        <article class="pillar-card">
+          <span class="pillar-card__icon" aria-hidden="true">🎵</span>
+          <h2 class="pillar-card__title">Sound Therapy</h2>
+          <p class="pillar-card__desc">
+            Binaural beats and nature soundscapes synchronise your brainwaves,
+            reducing cortisol and inviting deep calm.
+          </p>
+        </article>
+
+        <article class="pillar-card">
+          <span class="pillar-card__icon" aria-hidden="true">🫧</span>
+          <h2 class="pillar-card__title">Guided Breathing</h2>
+          <p class="pillar-card__desc">
+            Visual breath guides and tactile rhythms activate your parasympathetic
+            nervous system within minutes.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ⑦ BEGIN (new) ───────────────────────────── -->
+    <section class="placeholder-section placeholder-section--begin" id="begin" aria-labelledby="begin-heading">
+      <div class="placeholder-section__inner">
+        <span class="placeholder-section__icon" aria-hidden="true">🌿</span>
+        <h2 class="placeholder-section__title" id="begin-heading">Ready to begin?</h2>
+        <p class="placeholder-section__desc">
+          Choose a mode above or let Serenity guide you to the right session
+          based on how you're feeling right now.
+        </p>
+        <a class="begin-cta-btn" href="#home">Choose your mode ↑</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ───────────────────────────────────── -->
+  <footer class="footer" role="contentinfo">
+    <p>© 2025 Serenity — Light &amp; Sound Therapy System &nbsp;·&nbsp; Built with care for your wellbeing</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+
+</body>
+</html>
